@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2D74EEDD-2E50-4FB6-882D-AD196911F9E6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ADLIBrRATSample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>86772BD6-E892-474B-BA50-2BBA87AD60DC</key>
+		<string>https://github.com/mocoplex/RAT-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ADLIBrRATSample/ADLIBrRATSample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>86772BD6-E892-474B-BA50-2BBA87AD60DC</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mocoplex/RAT-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>86772BD6-E892-474B-BA50-2BBA87AD60DC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>86772BD6-E892-474B-BA50-2BBA87AD60DC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RAT-iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
