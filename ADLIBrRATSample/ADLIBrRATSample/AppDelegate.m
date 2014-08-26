@@ -15,12 +15,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    
+
     // Optional: set debug mode
     [[Tracker sharedSingletonClass] setDebugMode:YES];
     
     // RAT Tracker initialize the install tracking. Replace with your app ID (ex. 53f473e10cf2bf99ebbfeb34)
-    [[Tracker sharedSingletonClass] initialize:@"INSERT_YOUR_ADLIB_RAT_KEY"];
+    [[Tracker sharedSingletonClass] initialize:@"53f473e10cf2bf99ebbfeb34"];
     
     return YES;
 }
@@ -55,7 +55,7 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     
-    NSLog(@"delegate openURL : %@", [url absoluteString]);
+    //NSLog(@"delegate openURL : %@", [url absoluteString]);
     
     @try {
     
@@ -63,6 +63,7 @@
         [[Tracker sharedSingletonClass] tagInit:url];
         
     
+        // --------------------------------------- test sample code ---------------------------------------
         NSDictionary *infoList = [[NSBundle mainBundle]infoDictionary];
     
         NSDictionary *urlScheme = [[infoList valueForKey:@"CFBundleURLTypes"] objectAtIndex:0];
@@ -86,13 +87,15 @@
                         NSString *item = [lastObj stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
                     
                         ViewController* mainController = (ViewController*)  self.window.rootViewController;
-                        [mainController loadDetail:item];
+                        [mainController showDetail:item];
                     
                         break;
                     }
                 }
             }
         }
+        // --------------------------------------- test sample code ---------------------------------------
+
         
     }
     @catch (NSException *exception) {

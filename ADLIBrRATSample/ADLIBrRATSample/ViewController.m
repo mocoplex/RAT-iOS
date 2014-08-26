@@ -62,37 +62,52 @@
     NSString *requestStr = [[request URL] absoluteString];
     NSString *scheme = [[request URL] scheme];
     
-    NSLog(@"url : %@", requestStr);
-    NSLog(@"scheme : %@", scheme);
+    //NSLog(@"url : %@", requestStr);
+    //NSLog(@"scheme : %@", scheme);
     
     if([scheme isEqualToString:@"ios"]){
         
         NSArray *listItems = [requestStr componentsSeparatedByString:@":"];
-        NSString *lastObj = [listItems lastObject];
+        NSString *value = [listItems lastObject];
         
-        if([requestStr rangeOfString:@"VIEW"].location != NSNotFound){
-            [[Tracker sharedSingletonClass] view:[NSDictionary dictionaryWithObject:lastObj forKey:@"pid"]];
+        if([requestStr rangeOfString:@"VIEW"].location != NSNotFound){ // View Sample Code
+            
+            // Optional : tag tracking
+            [[Tracker sharedSingletonClass] view:[NSDictionary dictionaryWithObjectsAndKeys:value, @"pid", nil]];
             
             NSString *detailURL = @"http://demo.mocoplex.com/rat/detail.html?item=";
 
-            detailURL = [detailURL stringByAppendingString:lastObj];
-            NSLog(@"fullURL : %@", detailURL);
+            detailURL = [detailURL stringByAppendingString:value];
+
             NSURLRequest *requestObj = [NSURLRequest requestWithURL:[NSURL URLWithString:detailURL]];
             [_webview loadRequest:requestObj];
             
-        }else if([requestStr rangeOfString:@"CART"].location != NSNotFound){
-            [[Tracker sharedSingletonClass] cart:[NSDictionary dictionaryWithObject:lastObj forKey:@"pid"]];
+        }else if([requestStr rangeOfString:@"CART"].location != NSNotFound){ // Cart Sample Code
             
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"Item added to Cart." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            // Optional : tag tracking
+            [[Tracker sharedSingletonClass] cart:[NSDictionary dictionaryWithObjectsAndKeys:value, @"pid", nil]];
             
-            [alert show];
-            
-        }else if([requestStr rangeOfString:@"BUY"].location != NSNotFound){
-            [[Tracker sharedSingletonClass] buy:[NSDictionary dictionaryWithObject:lastObj forKey:@"pid"]];
-            
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"Thank you." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"Item added to Cart."
+                                delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             
             [alert show];
+            
+        }else if([requestStr rangeOfString:@"BUY"].location != NSNotFound){ // Buy Sample Code
+            
+            // Optional : tag tracking
+            [[Tracker sharedSingletonClass] buy:[NSDictionary dictionaryWithObjectsAndKeys:value, @"pid", nil]];
+            
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"Thank you."
+                                delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            
+            [alert show];
+        }else if([requestStr rangeOfString:@"CUSTOM"].location != NSNotFound){ // Custom tag Sample Code
+            [[Tracker sharedSingletonClass] customTag:@"CLICK"
+                        value:[NSDictionary dictionaryWithObjectsAndKeys:value, @"pid",
+                                                                        @"cloth", @"category",
+                                                                        @"100000", @"price",
+                                                                        @"10", @"qty",
+                                                                        nil]];
         }
         return NO;
     }
@@ -100,8 +115,11 @@
     return YES;
 }
 
-- (void)loadDetail:(NSString *) data
+- (void)showDetail:(NSString *) data
 {
+    // Optional : tag tracking
+    [[Tracker sharedSingletonClass] view:[NSDictionary dictionaryWithObjectsAndKeys:data, @"pid", nil]];
+    
     NSString *fullURL = [NSString stringWithFormat:@"http://demo.mocoplex.com/rat/detail.html?item=%@", data];
     NSURL *url = [NSURL URLWithString:fullURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];

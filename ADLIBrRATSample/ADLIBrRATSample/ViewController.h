@@ -12,6 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UIWebView *webview;
 
-- (void)loadDetail:(NSString *) data;
+- (void)showDetail:(NSString *) data;
 
 @end
