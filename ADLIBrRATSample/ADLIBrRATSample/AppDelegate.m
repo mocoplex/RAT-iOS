@@ -20,7 +20,7 @@
     [[Tracker sharedSingletonClass] setDebugMode:YES];
     
     // RAT Tracker initialize the install tracking. Replace with your app ID (ex. 53f473e10cf2bf99ebbfeb34)
-    [[Tracker sharedSingletonClass] initialize:@"53f473e10cf2bf99ebbfeb34"];
+    [[Tracker sharedSingletonClass] initialize:@"INSERT_YOUR_RAT_APP_ID"];
     
     return YES;
 }
