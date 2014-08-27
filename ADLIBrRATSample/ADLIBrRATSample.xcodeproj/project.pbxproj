@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7D216DD019AB35A600379BBC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D216DCF19AB35A600379BBC /* AdSupport.framework */; };
 		7D216DD219AB35B600379BBC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D216DD119AB35B600379BBC /* CoreTelephony.framework */; };
-		7D216DE219AC5C8100379BBC /* ADLIBrRAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D216DE119AC5C8100379BBC /* ADLIBrRAT.framework */; };
+		7D216DEA19AD6D4400379BBC /* ADLIBrRAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D216DE919AD6D4400379BBC /* ADLIBrRAT.framework */; };
 		7DD065A21991BFE3009CB3C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD065A11991BFE3009CB3C2 /* Foundation.framework */; };
 		7DD065A41991BFE3009CB3C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD065A31991BFE3009CB3C2 /* CoreGraphics.framework */; };
 		7DD065A61991BFE3009CB3C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD065A51991BFE3009CB3C2 /* UIKit.framework */; };
@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		7D216DCF19AB35A600379BBC /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		7D216DD119AB35B600379BBC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		7D216DE119AC5C8100379BBC /* ADLIBrRAT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ADLIBrRAT.framework; sourceTree = "<group>"; };
+		7D216DE919AD6D4400379BBC /* ADLIBrRAT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ADLIBrRAT.framework; sourceTree = "<group>"; };
 		7DD0659E1991BFE3009CB3C2 /* ADLIBrRATSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADLIBrRATSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD065A11991BFE3009CB3C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7DD065A31991BFE3009CB3C2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,7 +70,7 @@
 			files = (
 				7D216DD219AB35B600379BBC /* CoreTelephony.framework in Frameworks */,
 				7D216DD019AB35A600379BBC /* AdSupport.framework in Frameworks */,
-				7D216DE219AC5C8100379BBC /* ADLIBrRAT.framework in Frameworks */,
+				7D216DEA19AD6D4400379BBC /* ADLIBrRAT.framework in Frameworks */,
 				7DD065A41991BFE3009CB3C2 /* CoreGraphics.framework in Frameworks */,
 				7DD065A61991BFE3009CB3C2 /* UIKit.framework in Frameworks */,
 				7DD065A21991BFE3009CB3C2 /* Foundation.framework in Frameworks */,
@@ -112,7 +112,7 @@
 		7DD065A01991BFE3009CB3C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7D216DE119AC5C8100379BBC /* ADLIBrRAT.framework */,
+				7D216DE919AD6D4400379BBC /* ADLIBrRAT.framework */,
 				7D216DD119AB35B600379BBC /* CoreTelephony.framework */,
 				7D216DCF19AB35A600379BBC /* AdSupport.framework */,
 				7DD065A11991BFE3009CB3C2 /* Foundation.framework */,
