@@ -53,63 +53,89 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
-    NSLog(@"ERROR");
+    if ([error code] != NSURLErrorCancelled) {
+        NSLog(@"webview error : %d", [error code]);
+    }
 }
 
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    NSString *requestStr = [[request URL] absoluteString];
-    NSString *scheme = [[request URL] scheme];
-    
-    //NSLog(@"url : %@", requestStr);
-    //NSLog(@"scheme : %@", scheme);
-    
-    if([scheme isEqualToString:@"ios"]){
+    @try {
+        NSString *requestStr = [[request URL] absoluteString];
+        NSString *scheme = [[request URL] scheme];
         
-        NSArray *listItems = [requestStr componentsSeparatedByString:@":"];
-        NSString *value = [listItems lastObject];
+        NSString *requestStrUTF8 = [requestStr stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         
-        if([requestStr rangeOfString:@"VIEW"].location != NSNotFound){ // View Sample Code
-            
-            // Optional : tag tracking
-            [[Tracker sharedSingletonClass] view:[NSDictionary dictionaryWithObjectsAndKeys:value, @"pid", nil]];
-            
-            NSString *detailURL = @"http://demo.mocoplex.com/rat/detail.html?item=";
+        NSLog(@"reqeust->%@", requestStrUTF8);
 
-            detailURL = [detailURL stringByAppendingString:value];
+        if([scheme isEqualToString:@"adlibtrk"]){
 
-            NSURLRequest *requestObj = [NSURLRequest requestWithURL:[NSURL URLWithString:detailURL]];
-            [_webview loadRequest:requestObj];
-            
-        }else if([requestStr rangeOfString:@"CART"].location != NSNotFound){ // Cart Sample Code
-            
-            // Optional : tag tracking
-            [[Tracker sharedSingletonClass] cart:[NSDictionary dictionaryWithObjectsAndKeys:value, @"pid", nil]];
-            
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"Item added to Cart."
-                                delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            
-            [alert show];
-            
-        }else if([requestStr rangeOfString:@"BUY"].location != NSNotFound){ // Buy Sample Code
-            
-            // Optional : tag tracking
-            [[Tracker sharedSingletonClass] buy:[NSDictionary dictionaryWithObjectsAndKeys:value, @"pid", nil]];
-            
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"Thank you."
-                                delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            
-            [alert show];
-        }else if([requestStr rangeOfString:@"CUSTOM"].location != NSNotFound){ // Custom tag Sample Code
-            [[Tracker sharedSingletonClass] customTag:@"CLICK"
-                        value:[NSDictionary dictionaryWithObjectsAndKeys:value, @"pid",
-                                                                        @"cloth", @"category",
-                                                                        @"100000", @"price",
-                                                                        @"10", @"qty",
-                                                                        nil]];
+            if([requestStr hasPrefix:@"adlibtrk:VIEW:"]){
+                
+                NSString *requestData = [requestStr substringFromIndex:[requestStr rangeOfString:@"adlibtrk:VIEW:"].length];
+                NSString *requestDataUTF8 = [requestData stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+                
+                NSData *data = [requestDataUTF8 dataUsingEncoding:NSUTF8StringEncoding];
+                NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data
+                                                                         options:kNilOptions
+                                                                           error:nil];
+                // Optional : tag tracking (VIEW)
+                [[Tracker sharedSingletonClass] view:jsonData];
+            }else if([requestStr hasPrefix:@"adlibtrk:CART:"]){
+                
+                NSString *requestData = [requestStr substringFromIndex:[requestStr rangeOfString:@"adlibtrk:CART:"].length];
+                NSString *requestDataUTF8 = [requestData stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+                
+                NSData *data = [requestDataUTF8 dataUsingEncoding:NSUTF8StringEncoding];
+                NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data
+                                                                         options:kNilOptions
+                                                                           error:nil];
+                // Optional : tag tracking (CART)
+                [[Tracker sharedSingletonClass] cart:jsonData];
+            }else if([requestStr hasPrefix:@"adlibtrk:BUY:"]){
+                
+                NSString *requestData = [requestStr substringFromIndex:[requestStr rangeOfString:@"adlibtrk:BUY:"].length];
+                NSString *requestDataUTF8 = [requestData stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
+                NSData *data = [requestDataUTF8 dataUsingEncoding:NSUTF8StringEncoding];
+                NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data
+                                                                         options:kNilOptions
+                                                                           error:nil];
+                // Optional : tag tracking (BUY)
+                [[Tracker sharedSingletonClass] buy:jsonData];
+            }else if([requestStr hasPrefix:@"adlibtrk:CUSTOM_TAG:"]){
+                
+                NSString *requestData = [requestStr substringFromIndex:[requestStr rangeOfString:@"adlibtrk:CUSTOM_TAG:"].length];
+                NSString *requestDataUTF8 = [requestData stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+                
+                NSString *tagName = [requestDataUTF8 substringToIndex:[requestDataUTF8 rangeOfString:@"#####"].location];
+                
+                NSInteger idx = [requestDataUTF8 rangeOfString:@"#####"].location + [requestDataUTF8 rangeOfString:@"#####"].length;
+                NSString *tagValue = [requestDataUTF8 substringFromIndex:idx];
+                
+                NSData *data = [tagValue dataUsingEncoding:NSUTF8StringEncoding];
+                NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data
+                                                                         options:kNilOptions
+                                                                           error:nil];
+                
+                // Optional : tag tracking (CUSTOM_TAG)
+                [[Tracker sharedSingletonClass] customTag:tagName value:jsonData];
+            }else if([requestStr rangeOfString:@"adlibtrk:MESSAGE:"].location != NSNotFound){ // alert message
+                
+                NSString *requestData = [requestStr substringFromIndex:[requestStr rangeOfString:@"adlibtrk:MESSAGE:"].length];
+                NSString *requestDataUTF8 = [requestData stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Info" message:requestDataUTF8
+                                                                delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [alert show];
+            }
+            return NO;
         }
-        return NO;
+    }
+    @catch (NSException *exception) {
+
+        
     }
 
     return YES;
