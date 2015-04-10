@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController  <UIWebViewDelegate>
+@interface HybridController : UIViewController  <UIWebViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIWebView *webview;
-
-- (void)showDetail:(NSString *) data;
 
 @end

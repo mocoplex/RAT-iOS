@@ -29,5 +29,8 @@
 - (void)cart:(NSDictionary *)vdic;
 - (void)buy:(NSDictionary *)vdic;
 - (void)customTag:(NSString *)tagName value:(NSDictionary *)vdic;
+- (void)customTagExtra:(NSString *)tagName value:(NSDictionary *)vdic extra:(NSString *)vexra;
 
+- (BOOL)parseWebViewRequest:(UIWebView*)wv with:(NSURLRequest *)request;
+- (void)criteo_event:(NSArray*)events;
 @end

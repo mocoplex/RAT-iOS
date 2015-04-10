@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		494132181AD63D0B000BC4C1 /* ADLIBrRAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494132171AD63D0B000BC4C1 /* ADLIBrRAT.framework */; };
+		4941321D1AD63E82000BC4C1 /* HybridController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4941321A1AD63E82000BC4C1 /* HybridController.m */; };
+		4941321E1AD63E82000BC4C1 /* NativeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4941321C1AD63E82000BC4C1 /* NativeController.m */; };
+		4941322B1AD68316000BC4C1 /* CriteoHybridController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494132281AD68316000BC4C1 /* CriteoHybridController.m */; };
+		4941322C1AD68316000BC4C1 /* CriteoNativeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4941322A1AD68316000BC4C1 /* CriteoNativeController.m */; };
 		7D216DD019AB35A600379BBC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D216DCF19AB35A600379BBC /* AdSupport.framework */; };
 		7D216DD219AB35B600379BBC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D216DD119AB35B600379BBC /* CoreTelephony.framework */; };
-		7D216DEA19AD6D4400379BBC /* ADLIBrRAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D216DE919AD6D4400379BBC /* ADLIBrRAT.framework */; };
 		7DD065A21991BFE3009CB3C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD065A11991BFE3009CB3C2 /* Foundation.framework */; };
 		7DD065A41991BFE3009CB3C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD065A31991BFE3009CB3C2 /* CoreGraphics.framework */; };
 		7DD065A61991BFE3009CB3C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD065A51991BFE3009CB3C2 /* UIKit.framework */; };
@@ -17,8 +21,6 @@
 		7DD065AE1991BFE3009CB3C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD065AD1991BFE3009CB3C2 /* main.m */; };
 		7DD065B21991BFE3009CB3C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD065B11991BFE3009CB3C2 /* AppDelegate.m */; };
 		7DD065B51991BFE3009CB3C2 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD065B31991BFE3009CB3C2 /* Main_iPhone.storyboard */; };
-		7DD065B81991BFE3009CB3C2 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD065B61991BFE3009CB3C2 /* Main_iPad.storyboard */; };
-		7DD065BB1991BFE3009CB3C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD065BA1991BFE3009CB3C2 /* ViewController.m */; };
 		7DD065BD1991BFE3009CB3C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DD065BC1991BFE3009CB3C2 /* Images.xcassets */; };
 		7DD065C41991BFE3009CB3C2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD065C31991BFE3009CB3C2 /* XCTest.framework */; };
 		7DD065C51991BFE3009CB3C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD065A11991BFE3009CB3C2 /* Foundation.framework */; };
@@ -38,9 +40,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		494132171AD63D0B000BC4C1 /* ADLIBrRAT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ADLIBrRAT.framework; sourceTree = "<group>"; };
+		494132191AD63E82000BC4C1 /* HybridController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridController.h; sourceTree = "<group>"; };
+		4941321A1AD63E82000BC4C1 /* HybridController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridController.m; sourceTree = "<group>"; };
+		4941321B1AD63E82000BC4C1 /* NativeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeController.h; sourceTree = "<group>"; };
+		4941321C1AD63E82000BC4C1 /* NativeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeController.m; sourceTree = "<group>"; };
+		494132271AD68316000BC4C1 /* CriteoHybridController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriteoHybridController.h; sourceTree = "<group>"; };
+		494132281AD68316000BC4C1 /* CriteoHybridController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriteoHybridController.m; sourceTree = "<group>"; };
+		494132291AD68316000BC4C1 /* CriteoNativeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriteoNativeController.h; sourceTree = "<group>"; };
+		4941322A1AD68316000BC4C1 /* CriteoNativeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriteoNativeController.m; sourceTree = "<group>"; };
 		7D216DCF19AB35A600379BBC /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		7D216DD119AB35B600379BBC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		7D216DE919AD6D4400379BBC /* ADLIBrRAT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ADLIBrRAT.framework; sourceTree = "<group>"; };
 		7DD0659E1991BFE3009CB3C2 /* ADLIBrRATSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADLIBrRATSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD065A11991BFE3009CB3C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7DD065A31991BFE3009CB3C2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,9 +62,6 @@
 		7DD065B01991BFE3009CB3C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7DD065B11991BFE3009CB3C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7DD065B41991BFE3009CB3C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		7DD065B71991BFE3009CB3C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		7DD065B91991BFE3009CB3C2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7DD065BA1991BFE3009CB3C2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7DD065BC1991BFE3009CB3C2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7DD065C21991BFE3009CB3C2 /* ADLIBrRATSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADLIBrRATSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD065C31991BFE3009CB3C2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -70,7 +77,7 @@
 			files = (
 				7D216DD219AB35B600379BBC /* CoreTelephony.framework in Frameworks */,
 				7D216DD019AB35A600379BBC /* AdSupport.framework in Frameworks */,
-				7D216DEA19AD6D4400379BBC /* ADLIBrRAT.framework in Frameworks */,
+				494132181AD63D0B000BC4C1 /* ADLIBrRAT.framework in Frameworks */,
 				7DD065A41991BFE3009CB3C2 /* CoreGraphics.framework in Frameworks */,
 				7DD065A61991BFE3009CB3C2 /* UIKit.framework in Frameworks */,
 				7DD065A21991BFE3009CB3C2 /* Foundation.framework in Frameworks */,
@@ -90,6 +97,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		494132261AD68316000BC4C1 /* criteo */ = {
+			isa = PBXGroup;
+			children = (
+				494132271AD68316000BC4C1 /* CriteoHybridController.h */,
+				494132281AD68316000BC4C1 /* CriteoHybridController.m */,
+				494132291AD68316000BC4C1 /* CriteoNativeController.h */,
+				4941322A1AD68316000BC4C1 /* CriteoNativeController.m */,
+			);
+			path = criteo;
+			sourceTree = "<group>";
+		};
 		7DD065951991BFE3009CB3C2 = {
 			isa = PBXGroup;
 			children = (
@@ -112,7 +130,7 @@
 		7DD065A01991BFE3009CB3C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7D216DE919AD6D4400379BBC /* ADLIBrRAT.framework */,
+				494132171AD63D0B000BC4C1 /* ADLIBrRAT.framework */,
 				7D216DD119AB35B600379BBC /* CoreTelephony.framework */,
 				7D216DCF19AB35A600379BBC /* AdSupport.framework */,
 				7DD065A11991BFE3009CB3C2 /* Foundation.framework */,
@@ -126,12 +144,14 @@
 		7DD065A71991BFE3009CB3C2 /* ADLIBrRATSample */ = {
 			isa = PBXGroup;
 			children = (
+				494132261AD68316000BC4C1 /* criteo */,
+				494132191AD63E82000BC4C1 /* HybridController.h */,
+				4941321A1AD63E82000BC4C1 /* HybridController.m */,
+				4941321B1AD63E82000BC4C1 /* NativeController.h */,
+				4941321C1AD63E82000BC4C1 /* NativeController.m */,
 				7DD065B01991BFE3009CB3C2 /* AppDelegate.h */,
 				7DD065B11991BFE3009CB3C2 /* AppDelegate.m */,
 				7DD065B31991BFE3009CB3C2 /* Main_iPhone.storyboard */,
-				7DD065B61991BFE3009CB3C2 /* Main_iPad.storyboard */,
-				7DD065B91991BFE3009CB3C2 /* ViewController.h */,
-				7DD065BA1991BFE3009CB3C2 /* ViewController.m */,
 				7DD065BC1991BFE3009CB3C2 /* Images.xcassets */,
 				7DD065A81991BFE3009CB3C2 /* Supporting Files */,
 			);
@@ -243,7 +263,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DD065B81991BFE3009CB3C2 /* Main_iPad.storyboard in Resources */,
 				7DD065BD1991BFE3009CB3C2 /* Images.xcassets in Resources */,
 				7DD065B51991BFE3009CB3C2 /* Main_iPhone.storyboard in Resources */,
 				7DD065AC1991BFE3009CB3C2 /* InfoPlist.strings in Resources */,
@@ -265,7 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DD065BB1991BFE3009CB3C2 /* ViewController.m in Sources */,
+				4941321E1AD63E82000BC4C1 /* NativeController.m in Sources */,
+				4941322B1AD68316000BC4C1 /* CriteoHybridController.m in Sources */,
+				4941322C1AD68316000BC4C1 /* CriteoNativeController.m in Sources */,
+				4941321D1AD63E82000BC4C1 /* HybridController.m in Sources */,
 				7DD065B21991BFE3009CB3C2 /* AppDelegate.m in Sources */,
 				7DD065AE1991BFE3009CB3C2 /* main.m in Sources */,
 			);
@@ -304,14 +326,6 @@
 				7DD065B41991BFE3009CB3C2 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		7DD065B61991BFE3009CB3C2 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7DD065B71991BFE3009CB3C2 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		7DD065CC1991BFE3009CB3C2 /* InfoPlist.strings */ = {

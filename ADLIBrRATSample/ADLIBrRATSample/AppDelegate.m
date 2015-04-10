@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 #import <ADLIBrRAT/Tracker.h>
 
 @implementation AppDelegate
@@ -20,7 +19,7 @@
     [[Tracker sharedSingletonClass] setDebugMode:YES];
     
     // RAT Tracker initialize the install tracking. Replace with your app ID (ex. 53f473e10cf2bf99ebbfeb34)
-    [[Tracker sharedSingletonClass] initialize:@"INSERT_YOUR_RAT_APP_ID"];
+    [[Tracker sharedSingletonClass] initialize:@"INSER YOUR RAT ID"];
     
     return YES;
 }
@@ -54,49 +53,10 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    
-    //NSLog(@"delegate openURL : %@", [url absoluteString]);
-    
-    @try {
-    
+
+    @try {    
         // RAT Tracker initialize the tag tracking
         [[Tracker sharedSingletonClass] tagInit:url];
-        
-    
-        // --------------------------------------- test sample code ---------------------------------------
-        NSDictionary *infoList = [[NSBundle mainBundle]infoDictionary];
-    
-        NSDictionary *urlScheme = [[infoList valueForKey:@"CFBundleURLTypes"] objectAtIndex:0];
-    
-        NSString * urlSchemeName = [[urlScheme valueForKey:@"CFBundleURLSchemes"] objectAtIndex:0];
-    
-        if ([[url scheme] isEqualToString:urlSchemeName]) {
-        
-            NSString *query = [url query];
-        
-            if([[url host] rangeOfString:@"view"].location != NSNotFound
-                    && [query rangeOfString:@"pid="].location != NSNotFound) {
-            
-                NSArray *listItems = [query componentsSeparatedByString:@"&"];
-
-                for (int i=0; i<[listItems count]; i++) {
-                    if ([[listItems objectAtIndex:i] rangeOfString:@"pid="].location != NSNotFound) {
-                        NSArray *listItems2 = [[listItems objectAtIndex:i] componentsSeparatedByString:@"="];
-                        NSString *lastObj = [listItems2 lastObject];
-                    
-                        NSString *item = [lastObj stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-                    
-                        ViewController* mainController = (ViewController*)  self.window.rootViewController;
-                        [mainController showDetail:item];
-                    
-                        break;
-                    }
-                }
-            }
-        }
-        // --------------------------------------- test sample code ---------------------------------------
-
-        
     }
     @catch (NSException *exception) {
     }
