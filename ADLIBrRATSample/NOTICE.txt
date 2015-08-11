@@ -1,1 +1,1 @@
-RAT SDK Version : 1.0.0
+RAT SDK Version : 1.0.4

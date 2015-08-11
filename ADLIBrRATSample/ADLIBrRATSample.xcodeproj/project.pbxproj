@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		494132181AD63D0B000BC4C1 /* ADLIBrRAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494132171AD63D0B000BC4C1 /* ADLIBrRAT.framework */; };
 		4941321D1AD63E82000BC4C1 /* HybridController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4941321A1AD63E82000BC4C1 /* HybridController.m */; };
 		4941321E1AD63E82000BC4C1 /* NativeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4941321C1AD63E82000BC4C1 /* NativeController.m */; };
 		4941322B1AD68316000BC4C1 /* CriteoHybridController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494132281AD68316000BC4C1 /* CriteoHybridController.m */; };
 		4941322C1AD68316000BC4C1 /* CriteoNativeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4941322A1AD68316000BC4C1 /* CriteoNativeController.m */; };
-		7D216DD019AB35A600379BBC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D216DCF19AB35A600379BBC /* AdSupport.framework */; };
 		7D216DD219AB35B600379BBC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D216DD119AB35B600379BBC /* CoreTelephony.framework */; };
 		7DD065A21991BFE3009CB3C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD065A11991BFE3009CB3C2 /* Foundation.framework */; };
 		7DD065A41991BFE3009CB3C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD065A31991BFE3009CB3C2 /* CoreGraphics.framework */; };
@@ -27,6 +25,7 @@
 		7DD065C61991BFE3009CB3C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD065A51991BFE3009CB3C2 /* UIKit.framework */; };
 		7DD065CE1991BFE3009CB3C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DD065CC1991BFE3009CB3C2 /* InfoPlist.strings */; };
 		7DD065D01991BFE3009CB3C2 /* ADLIBrRATSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD065CF1991BFE3009CB3C2 /* ADLIBrRATSampleTests.m */; };
+		B0E21D0C1B79BC760047F818 /* ADLIBrRAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E21D0B1B79BC760047F818 /* ADLIBrRAT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		494132171AD63D0B000BC4C1 /* ADLIBrRAT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ADLIBrRAT.framework; sourceTree = "<group>"; };
 		494132191AD63E82000BC4C1 /* HybridController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridController.h; sourceTree = "<group>"; };
 		4941321A1AD63E82000BC4C1 /* HybridController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridController.m; sourceTree = "<group>"; };
 		4941321B1AD63E82000BC4C1 /* NativeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeController.h; sourceTree = "<group>"; };
@@ -49,7 +47,6 @@
 		494132281AD68316000BC4C1 /* CriteoHybridController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriteoHybridController.m; sourceTree = "<group>"; };
 		494132291AD68316000BC4C1 /* CriteoNativeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriteoNativeController.h; sourceTree = "<group>"; };
 		4941322A1AD68316000BC4C1 /* CriteoNativeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriteoNativeController.m; sourceTree = "<group>"; };
-		7D216DCF19AB35A600379BBC /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		7D216DD119AB35B600379BBC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		7DD0659E1991BFE3009CB3C2 /* ADLIBrRATSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADLIBrRATSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD065A11991BFE3009CB3C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,6 +65,7 @@
 		7DD065CB1991BFE3009CB3C2 /* ADLIBrRATSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ADLIBrRATSampleTests-Info.plist"; sourceTree = "<group>"; };
 		7DD065CD1991BFE3009CB3C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7DD065CF1991BFE3009CB3C2 /* ADLIBrRATSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADLIBrRATSampleTests.m; sourceTree = "<group>"; };
+		B0E21D0B1B79BC760047F818 /* ADLIBrRAT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ADLIBrRAT.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +74,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D216DD219AB35B600379BBC /* CoreTelephony.framework in Frameworks */,
-				7D216DD019AB35A600379BBC /* AdSupport.framework in Frameworks */,
-				494132181AD63D0B000BC4C1 /* ADLIBrRAT.framework in Frameworks */,
 				7DD065A41991BFE3009CB3C2 /* CoreGraphics.framework in Frameworks */,
+				B0E21D0C1B79BC760047F818 /* ADLIBrRAT.framework in Frameworks */,
 				7DD065A61991BFE3009CB3C2 /* UIKit.framework in Frameworks */,
 				7DD065A21991BFE3009CB3C2 /* Foundation.framework in Frameworks */,
 			);
@@ -130,9 +127,8 @@
 		7DD065A01991BFE3009CB3C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				494132171AD63D0B000BC4C1 /* ADLIBrRAT.framework */,
+				B0E21D0B1B79BC760047F818 /* ADLIBrRAT.framework */,
 				7D216DD119AB35B600379BBC /* CoreTelephony.framework */,
-				7D216DCF19AB35A600379BBC /* AdSupport.framework */,
 				7DD065A11991BFE3009CB3C2 /* Foundation.framework */,
 				7DD065A31991BFE3009CB3C2 /* CoreGraphics.framework */,
 				7DD065A51991BFE3009CB3C2 /* UIKit.framework */,
