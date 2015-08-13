@@ -13,7 +13,6 @@
 		4941322C1AD68316000BC4C1 /* CriteoNativeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4941322A1AD68316000BC4C1 /* CriteoNativeController.m */; };
 		7D216DD219AB35B600379BBC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D216DD119AB35B600379BBC /* CoreTelephony.framework */; };
 		7DD065A21991BFE3009CB3C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD065A11991BFE3009CB3C2 /* Foundation.framework */; };
-		7DD065A41991BFE3009CB3C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD065A31991BFE3009CB3C2 /* CoreGraphics.framework */; };
 		7DD065A61991BFE3009CB3C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD065A51991BFE3009CB3C2 /* UIKit.framework */; };
 		7DD065AC1991BFE3009CB3C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DD065AA1991BFE3009CB3C2 /* InfoPlist.strings */; };
 		7DD065AE1991BFE3009CB3C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD065AD1991BFE3009CB3C2 /* main.m */; };
@@ -73,9 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D216DD219AB35B600379BBC /* CoreTelephony.framework in Frameworks */,
-				7DD065A41991BFE3009CB3C2 /* CoreGraphics.framework in Frameworks */,
 				B0E21D0C1B79BC760047F818 /* ADLIBrRAT.framework in Frameworks */,
+				7D216DD219AB35B600379BBC /* CoreTelephony.framework in Frameworks */,
 				7DD065A61991BFE3009CB3C2 /* UIKit.framework in Frameworks */,
 				7DD065A21991BFE3009CB3C2 /* Foundation.framework in Frameworks */,
 			);
