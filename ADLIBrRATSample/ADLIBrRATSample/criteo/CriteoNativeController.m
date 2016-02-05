@@ -7,11 +7,7 @@
 //
 
 #import "CriteoNativeController.h"
-#import <ADLIBrRAT/Tracker.h>
-#import <iAd/iAd.h>
-#import <AdSupport/ASIdentifierManager.h>
-
-#import <ADLIBrRAT/Tracker.h>
+#import <ADLIBrRAT/ALTracker.h>
 
 @interface CriteoNativeController ()
 
@@ -45,7 +41,7 @@
     [obj setObject:@"상품번호" forKey:@"product"];
     [list addObject:obj];
     
-    [[Tracker sharedSingletonClass] criteo_event:list];
+    [[ALTracker sharedSingletonClass] criteo_event:list];
 }
 
 - (IBAction)clk_cart:(id)sender
@@ -79,7 +75,7 @@
     [obj setObject:prodlist forKey:@"product"];
     [list addObject:obj];
 
-    [[Tracker sharedSingletonClass] criteo_event:list];
+    [[ALTracker sharedSingletonClass] criteo_event:list];
 }
 
 - (IBAction)clk_buy:(id)sender
@@ -114,7 +110,7 @@
     [obj setObject:prodlist forKey:@"product"];
     [list addObject:obj];
     
-    [[Tracker sharedSingletonClass] criteo_event:list];
+    [[ALTracker sharedSingletonClass] criteo_event:list];
 }
 
 - (IBAction)clk_home:(id)sender
@@ -127,7 +123,7 @@
     [obj setObject:eventName forKey:@"event"];
     [list addObject:obj];
     
-    [[Tracker sharedSingletonClass] criteo_event:list];
+    [[ALTracker sharedSingletonClass] criteo_event:list];
 }
 
 - (IBAction)clk_listing:(id)sender
@@ -147,7 +143,7 @@
 
     [list addObject:obj];
     
-    [[Tracker sharedSingletonClass] criteo_event:list];
+    [[ALTracker sharedSingletonClass] criteo_event:list];
 }
 
 

@@ -7,11 +7,7 @@
 //
 
 #import "HybridController.h"
-#import <ADLIBrRAT/Tracker.h>
-#import <iAd/iAd.h>
-#import <AdSupport/ASIdentifierManager.h>
-
-#import <ADLIBrRAT/Tracker.h>
+#import <ADLIBrRAT/ALTracker.h>
 
 @interface HybridController ()
 
@@ -66,7 +62,7 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    if([[Tracker sharedSingletonClass] parseWebViewRequest:webView with:request])
+    if([[ALTracker sharedSingletonClass] parseWebViewRequest:webView with:request])
         return NO;
 
     return YES;

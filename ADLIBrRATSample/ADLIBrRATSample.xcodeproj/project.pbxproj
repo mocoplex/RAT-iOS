@@ -19,23 +19,9 @@
 		7DD065B21991BFE3009CB3C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD065B11991BFE3009CB3C2 /* AppDelegate.m */; };
 		7DD065B51991BFE3009CB3C2 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD065B31991BFE3009CB3C2 /* Main_iPhone.storyboard */; };
 		7DD065BD1991BFE3009CB3C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DD065BC1991BFE3009CB3C2 /* Images.xcassets */; };
-		7DD065C41991BFE3009CB3C2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD065C31991BFE3009CB3C2 /* XCTest.framework */; };
-		7DD065C51991BFE3009CB3C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD065A11991BFE3009CB3C2 /* Foundation.framework */; };
-		7DD065C61991BFE3009CB3C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD065A51991BFE3009CB3C2 /* UIKit.framework */; };
-		7DD065CE1991BFE3009CB3C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DD065CC1991BFE3009CB3C2 /* InfoPlist.strings */; };
-		7DD065D01991BFE3009CB3C2 /* ADLIBrRATSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD065CF1991BFE3009CB3C2 /* ADLIBrRATSampleTests.m */; };
-		B0E21D0C1B79BC760047F818 /* ADLIBrRAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E21D0B1B79BC760047F818 /* ADLIBrRAT.framework */; };
+		B0C1B2C41C64322F0028F243 /* PickyNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C1B2C31C64322F0028F243 /* PickyNativeViewController.m */; };
+		B0C1B2C61C6435880028F243 /* ADLIBrRAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C1B2C51C6435880028F243 /* ADLIBrRAT.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		7DD065C71991BFE3009CB3C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7DD065961991BFE3009CB3C2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7DD0659D1991BFE3009CB3C2;
-			remoteInfo = ADLIBrRATSample;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		494132191AD63E82000BC4C1 /* HybridController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridController.h; sourceTree = "<group>"; };
@@ -59,12 +45,12 @@
 		7DD065B11991BFE3009CB3C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7DD065B41991BFE3009CB3C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		7DD065BC1991BFE3009CB3C2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		7DD065C21991BFE3009CB3C2 /* ADLIBrRATSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADLIBrRATSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DD065C31991BFE3009CB3C2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7DD065CB1991BFE3009CB3C2 /* ADLIBrRATSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ADLIBrRATSampleTests-Info.plist"; sourceTree = "<group>"; };
 		7DD065CD1991BFE3009CB3C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7DD065CF1991BFE3009CB3C2 /* ADLIBrRATSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADLIBrRATSampleTests.m; sourceTree = "<group>"; };
-		B0E21D0B1B79BC760047F818 /* ADLIBrRAT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ADLIBrRAT.framework; sourceTree = "<group>"; };
+		B0C1B2C21C64322F0028F243 /* PickyNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickyNativeViewController.h; sourceTree = "<group>"; };
+		B0C1B2C31C64322F0028F243 /* PickyNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickyNativeViewController.m; sourceTree = "<group>"; };
+		B0C1B2C51C6435880028F243 /* ADLIBrRAT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ADLIBrRAT.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,20 +58,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0E21D0C1B79BC760047F818 /* ADLIBrRAT.framework in Frameworks */,
+				B0C1B2C61C6435880028F243 /* ADLIBrRAT.framework in Frameworks */,
 				7D216DD219AB35B600379BBC /* CoreTelephony.framework in Frameworks */,
 				7DD065A61991BFE3009CB3C2 /* UIKit.framework in Frameworks */,
 				7DD065A21991BFE3009CB3C2 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7DD065BF1991BFE3009CB3C2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7DD065C41991BFE3009CB3C2 /* XCTest.framework in Frameworks */,
-				7DD065C61991BFE3009CB3C2 /* UIKit.framework in Frameworks */,
-				7DD065C51991BFE3009CB3C2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				7DD0659E1991BFE3009CB3C2 /* ADLIBrRATSample.app */,
-				7DD065C21991BFE3009CB3C2 /* ADLIBrRATSampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,12 +100,11 @@
 		7DD065A01991BFE3009CB3C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B0E21D0B1B79BC760047F818 /* ADLIBrRAT.framework */,
+				B0C1B2C51C6435880028F243 /* ADLIBrRAT.framework */,
 				7D216DD119AB35B600379BBC /* CoreTelephony.framework */,
 				7DD065A11991BFE3009CB3C2 /* Foundation.framework */,
 				7DD065A31991BFE3009CB3C2 /* CoreGraphics.framework */,
 				7DD065A51991BFE3009CB3C2 /* UIKit.framework */,
-				7DD065C31991BFE3009CB3C2 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -143,6 +117,8 @@
 				4941321A1AD63E82000BC4C1 /* HybridController.m */,
 				4941321B1AD63E82000BC4C1 /* NativeController.h */,
 				4941321C1AD63E82000BC4C1 /* NativeController.m */,
+				B0C1B2C21C64322F0028F243 /* PickyNativeViewController.h */,
+				B0C1B2C31C64322F0028F243 /* PickyNativeViewController.m */,
 				7DD065B01991BFE3009CB3C2 /* AppDelegate.h */,
 				7DD065B11991BFE3009CB3C2 /* AppDelegate.m */,
 				7DD065B31991BFE3009CB3C2 /* Main_iPhone.storyboard */,
@@ -201,37 +177,14 @@
 			productReference = 7DD0659E1991BFE3009CB3C2 /* ADLIBrRATSample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7DD065C11991BFE3009CB3C2 /* ADLIBrRATSampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7DD065D61991BFE3009CB3C2 /* Build configuration list for PBXNativeTarget "ADLIBrRATSampleTests" */;
-			buildPhases = (
-				7DD065BE1991BFE3009CB3C2 /* Sources */,
-				7DD065BF1991BFE3009CB3C2 /* Frameworks */,
-				7DD065C01991BFE3009CB3C2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7DD065C81991BFE3009CB3C2 /* PBXTargetDependency */,
-			);
-			name = ADLIBrRATSampleTests;
-			productName = ADLIBrRATSampleTests;
-			productReference = 7DD065C21991BFE3009CB3C2 /* ADLIBrRATSampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		7DD065961991BFE3009CB3C2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = mocoplex;
-				TargetAttributes = {
-					7DD065C11991BFE3009CB3C2 = {
-						TestTargetID = 7DD0659D1991BFE3009CB3C2;
-					};
-				};
 			};
 			buildConfigurationList = 7DD065991991BFE3009CB3C2 /* Build configuration list for PBXProject "ADLIBrRATSample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -247,7 +200,6 @@
 			projectRoot = "";
 			targets = (
 				7DD0659D1991BFE3009CB3C2 /* ADLIBrRATSample */,
-				7DD065C11991BFE3009CB3C2 /* ADLIBrRATSampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -263,14 +215,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7DD065C01991BFE3009CB3C2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7DD065CE1991BFE3009CB3C2 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -280,6 +224,7 @@
 			files = (
 				4941321E1AD63E82000BC4C1 /* NativeController.m in Sources */,
 				4941322B1AD68316000BC4C1 /* CriteoHybridController.m in Sources */,
+				B0C1B2C41C64322F0028F243 /* PickyNativeViewController.m in Sources */,
 				4941322C1AD68316000BC4C1 /* CriteoNativeController.m in Sources */,
 				4941321D1AD63E82000BC4C1 /* HybridController.m in Sources */,
 				7DD065B21991BFE3009CB3C2 /* AppDelegate.m in Sources */,
@@ -287,23 +232,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7DD065BE1991BFE3009CB3C2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7DD065D01991BFE3009CB3C2 /* ADLIBrRATSampleTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7DD065C81991BFE3009CB3C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7DD0659D1991BFE3009CB3C2 /* ADLIBrRATSample */;
-			targetProxy = 7DD065C71991BFE3009CB3C2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7DD065AA1991BFE3009CB3C2 /* InfoPlist.strings */ = {
@@ -351,6 +280,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -365,7 +295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -398,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -415,13 +345,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/ADLIBrRAT-boyphyepvtxcisefemqkkqxetzzg/Build/Products/Release-iphoneos",
-					"$(PROJECT_DIR)/library",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ADLIBrRATSample/ADLIBrRATSample-Prefix.pch";
 				INFOPLIST_FILE = "ADLIBrRATSample/ADLIBrRATSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mocoplex.rat.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
@@ -439,56 +368,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/ADLIBrRAT-boyphyepvtxcisefemqkkqxetzzg/Build/Products/Release-iphoneos",
-					"$(PROJECT_DIR)/library",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ADLIBrRATSample/ADLIBrRATSample-Prefix.pch";
 				INFOPLIST_FILE = "ADLIBrRATSample/ADLIBrRATSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mocoplex.rat.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		7DD065D71991BFE3009CB3C2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ADLIBrRATSample.app/ADLIBrRATSample";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ADLIBrRATSample/ADLIBrRATSample-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ADLIBrRATSampleTests/ADLIBrRATSampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		7DD065D81991BFE3009CB3C2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ADLIBrRATSample.app/ADLIBrRATSample";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ADLIBrRATSample/ADLIBrRATSample-Prefix.pch";
-				INFOPLIST_FILE = "ADLIBrRATSampleTests/ADLIBrRATSampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -509,15 +397,6 @@
 			buildConfigurations = (
 				7DD065D41991BFE3009CB3C2 /* Debug */,
 				7DD065D51991BFE3009CB3C2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7DD065D61991BFE3009CB3C2 /* Build configuration list for PBXNativeTarget "ADLIBrRATSampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7DD065D71991BFE3009CB3C2 /* Debug */,
-				7DD065D81991BFE3009CB3C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
