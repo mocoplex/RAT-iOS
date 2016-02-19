@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  ADLIBrRATSample
 //
-//  Created by YongSun Kim on 2014. 8. 6..
+//  Created by mocoplex on 2014. 8. 6..
 //  Copyright (c) 2014년 mocoplex. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 #import <ADLIBrRAT/ALTracker.h>
 
 
-#define ADLIB_RAT_KEY @"INSERT_YOUR_KEY"
+#define ADLIB_RAT_KEY @"INSERT_YOUR_RAT_KEY"
 
 
 @implementation AppDelegate
@@ -22,7 +22,7 @@
     // Optional: set debug mode
     [[ALTracker sharedSingletonClass] setDebugMode:YES];
     
-    // RAT Tracker initialize the install tracking. Replace with your app ID (ex. 53f473e10cf2bf99ebbfeb34)
+    // RAT Tracker initialize the install tracking. Replace with your app ID (ex. 560255520cf25399f0221e72)
     [[ALTracker sharedSingletonClass] initialize:ADLIB_RAT_KEY];
     
     return YES;

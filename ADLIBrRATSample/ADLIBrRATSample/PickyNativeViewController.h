@@ -12,4 +12,9 @@
 
 @property (nonatomic) IBOutlet UITextView *textView;
 
+@property (nonatomic) IBOutlet UIView *nativeView;
+@property (nonatomic) IBOutlet UILabel *nativeNameLabel;
+@property (nonatomic) IBOutlet UIImageView *nativeThumbView;
+
+
 @end

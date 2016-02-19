@@ -20,7 +20,7 @@
 		7DD065B51991BFE3009CB3C2 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD065B31991BFE3009CB3C2 /* Main_iPhone.storyboard */; };
 		7DD065BD1991BFE3009CB3C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DD065BC1991BFE3009CB3C2 /* Images.xcassets */; };
 		B0C1B2C41C64322F0028F243 /* PickyNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C1B2C31C64322F0028F243 /* PickyNativeViewController.m */; };
-		B0C1B2C61C6435880028F243 /* ADLIBrRAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C1B2C51C6435880028F243 /* ADLIBrRAT.framework */; };
+		B0C9777C1C76B3C80039C71E /* ADLIBrRAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C9777B1C76B3C80039C71E /* ADLIBrRAT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +50,7 @@
 		7DD065CF1991BFE3009CB3C2 /* ADLIBrRATSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADLIBrRATSampleTests.m; sourceTree = "<group>"; };
 		B0C1B2C21C64322F0028F243 /* PickyNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickyNativeViewController.h; sourceTree = "<group>"; };
 		B0C1B2C31C64322F0028F243 /* PickyNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickyNativeViewController.m; sourceTree = "<group>"; };
-		B0C1B2C51C6435880028F243 /* ADLIBrRAT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ADLIBrRAT.framework; sourceTree = "<group>"; };
+		B0C9777B1C76B3C80039C71E /* ADLIBrRAT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ADLIBrRAT.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0C1B2C61C6435880028F243 /* ADLIBrRAT.framework in Frameworks */,
+				B0C9777C1C76B3C80039C71E /* ADLIBrRAT.framework in Frameworks */,
 				7D216DD219AB35B600379BBC /* CoreTelephony.framework in Frameworks */,
 				7DD065A61991BFE3009CB3C2 /* UIKit.framework in Frameworks */,
 				7DD065A21991BFE3009CB3C2 /* Foundation.framework in Frameworks */,
@@ -100,7 +100,7 @@
 		7DD065A01991BFE3009CB3C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B0C1B2C51C6435880028F243 /* ADLIBrRAT.framework */,
+				B0C9777B1C76B3C80039C71E /* ADLIBrRAT.framework */,
 				7D216DD119AB35B600379BBC /* CoreTelephony.framework */,
 				7DD065A11991BFE3009CB3C2 /* Foundation.framework */,
 				7DD065A31991BFE3009CB3C2 /* CoreGraphics.framework */,

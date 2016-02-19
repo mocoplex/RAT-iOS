@@ -3,9 +3,9 @@
 //  ADLIBrRAT
 //
 //  Created by mocoplex on 2014. 7. 16..
-//  Copyright (c) 2014년 mocoplex. All rights reserved.
+//  Copyright (c) 2014 mocoplex. All rights reserved.
 //
-//  Tracker version 1.0.5
+//  Tracker version 1.0.6
 //  Build time pm 16:00 07.21.2015
 
 #import <Foundation/Foundation.h>
