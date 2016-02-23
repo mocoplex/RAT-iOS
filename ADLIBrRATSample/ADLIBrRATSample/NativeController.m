@@ -32,19 +32,24 @@
 - (IBAction)clk_view:(id)sender
 {
     NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-    [obj setValue:@"상품 번호 입력" forKey:@"p_no"];
-    [obj setValue:@"상품 이름 입력" forKey:@"name"];
-    [obj setValue:@"상품 수량" forKey:@"qty"];
+
+    [obj setValue:@"상품 번호 입력" forKey:@"p_no"];          //상품 번호
+    [obj setValue:@"상품 이름 입력" forKey:@"p_name"];        //상품 이름
+
+    [obj setValue:@"12300" forKey:@"price"];               //상품 현재 판매 가격 : 숫자만 포함하는 문자열로 전달
+    [obj setValue:@"xxx mall" forKey:@"shop_id"];          //샵이름 문자열
+    [obj setValue:@"http://상품이미지주소" forKey:@"thumb"];   //섬네일 주소 (http:// https:// 포함 전체 url)
+
+    [obj setValue:@"카테고리 정보 1, 소분류" forKey:@"cate1"]; //카테고리 소분류 (상품카테고리 소분류 : 없을 시 빈 값)
+    [obj setValue:@"카테고리 정보 2, 중분류" forKey:@"cate2"]; //카테고리 중분류 (상품카테고리 소분류 : 없을 시 빈 값)
+    [obj setValue:@"카테고리 정보 3, 대분류" forKey:@"cate3"]; //카테고리 대분류 (상품카테고리 대분류 : 없을 시 빈 값)
+
+    [obj setValue:@"12300" forKey:@"regular_price"];      //정상 가격 (정상가 미할인 가격 : 없을 시 빈 값)
+    [obj setValue:@"10000" forKey:@"discount"];           //세일 가격 (없을 시 빈값)
     
-    [obj setValue:@"12300" forKey:@"price"];    //상품 가격 : 숫자만 포함하는 문자열로 전달
-    [obj setValue:@"10000" forKey:@"discount"]; //할인된 가격 : 숫자만 포함하는 문자열로 전달
-    
-    [obj setValue:@"http://상품이미지주소" forKey:@"thumb"];
+    //기타 부가 정보
     [obj setValue:@"로그인 한 경우 사용자의 아이디 또는 이메일주소, 로그인하지 않은 경우 공백" forKey:@"account"];
-    [obj setValue:@"카테고리 정보 1, 대분류" forKey:@"cate1"];
-    [obj setValue:@"카테고리 정보 2, 중분류" forKey:@"cate2"];
-    [obj setValue:@"카테고리 정보 3, 소분류" forKey:@"cate3"];
-    
+    [obj setValue:@"상품 수량" forKey:@"qty"];
     [obj setValue:@"mobile" forKey:@"platform"];
     
     [[ALTracker sharedSingletonClass] reportViewTag:obj];
@@ -55,38 +60,48 @@
     // 상품이 여러개인경우 반복해서 호출합니다.
     {
         NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-        [obj setValue:@"상품 번호1" forKey:@"p_no"];
-        [obj setValue:@"상품 이름 입력" forKey:@"name"];
-        [obj setValue:@"상품 수량" forKey:@"qty"];
         
-        [obj setValue:@"12300" forKey:@"price"];    //상품 가격 : 숫자만 포함하는 문자열로 전달
-        [obj setValue:@"10000" forKey:@"discount"]; //할인된 가격 : 숫자만 포함하는 문자열로 전달
+        [obj setValue:@"상품 번호 입력" forKey:@"p_no"];          //상품 번호
+        [obj setValue:@"상품 이름 입력" forKey:@"p_name"];        //상품 이름
         
-        [obj setValue:@"http://상품이미지주소" forKey:@"thumb"];
+        [obj setValue:@"12300" forKey:@"price"];               //상품 현재 판매 가격 : 숫자만 포함하는 문자열로 전달
+        [obj setValue:@"xxx mall" forKey:@"shop_id"];          //샵이름 문자열
+        [obj setValue:@"http://상품이미지주소" forKey:@"thumb"];   //섬네일 주소 (http:// https:// 포함 전체 url)
+        
+        [obj setValue:@"카테고리 정보 1, 소분류" forKey:@"cate1"]; //카테고리 소분류 (상품카테고리 소분류 : 없을 시 빈 값)
+        [obj setValue:@"카테고리 정보 2, 중분류" forKey:@"cate2"]; //카테고리 중분류 (상품카테고리 소분류 : 없을 시 빈 값)
+        [obj setValue:@"카테고리 정보 3, 대분류" forKey:@"cate3"]; //카테고리 대분류 (상품카테고리 대분류 : 없을 시 빈 값)
+        
+        [obj setValue:@"12300" forKey:@"regular_price"];      //정상 가격 (정상가 미할인 가격 : 없을 시 빈 값)
+        [obj setValue:@"10000" forKey:@"discount"];           //세일 가격 (없을 시 빈값)
+        
+        //기타 부가 정보
         [obj setValue:@"로그인 한 경우 사용자의 아이디 또는 이메일주소, 로그인하지 않은 경우 공백" forKey:@"account"];
-        [obj setValue:@"카테고리 정보 1, 대분류" forKey:@"cate1"];
-        [obj setValue:@"카테고리 정보 2, 중분류" forKey:@"cate2"];
-        [obj setValue:@"카테고리 정보 3, 소분류" forKey:@"cate3"];
-        
+        [obj setValue:@"상품 수량" forKey:@"qty"];
         [obj setValue:@"mobile" forKey:@"platform"];
         
         [[ALTracker sharedSingletonClass] reportCartTag:obj];
     }
     {
         NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-        [obj setValue:@"상품 번호2" forKey:@"p_no"];
-        [obj setValue:@"상품 이름 입력" forKey:@"name"];
-        [obj setValue:@"상품 수량" forKey:@"qty"];
+     
+        [obj setValue:@"상품 번호 입력" forKey:@"p_no"];          //상품 번호
+        [obj setValue:@"상품 이름 입력" forKey:@"p_name"];        //상품 이름
         
-        [obj setValue:@"12300" forKey:@"price"];    //상품 가격 : 숫자만 포함하는 문자열로 전달
-        [obj setValue:@"10000" forKey:@"discount"]; //할인된 가격 : 숫자만 포함하는 문자열로 전달
+        [obj setValue:@"12300" forKey:@"price"];               //상품 현재 판매 가격 : 숫자만 포함하는 문자열로 전달
+        [obj setValue:@"xxx mall" forKey:@"shop_id"];          //샵이름 문자열
+        [obj setValue:@"http://상품이미지주소" forKey:@"thumb"];   //섬네일 주소 (http:// https:// 포함 전체 url)
         
-        [obj setValue:@"http://상품이미지주소" forKey:@"thumb"];
+        [obj setValue:@"카테고리 정보 1, 소분류" forKey:@"cate1"]; //카테고리 소분류 (상품카테고리 소분류 : 없을 시 빈 값)
+        [obj setValue:@"카테고리 정보 2, 중분류" forKey:@"cate2"]; //카테고리 중분류 (상품카테고리 소분류 : 없을 시 빈 값)
+        [obj setValue:@"카테고리 정보 3, 대분류" forKey:@"cate3"]; //카테고리 대분류 (상품카테고리 대분류 : 없을 시 빈 값)
+        
+        [obj setValue:@"12300" forKey:@"regular_price"];      //정상 가격 (정상가 미할인 가격 : 없을 시 빈 값)
+        [obj setValue:@"10000" forKey:@"discount"];           //세일 가격 (없을 시 빈값)
+        
+        //기타 부가 정보
         [obj setValue:@"로그인 한 경우 사용자의 아이디 또는 이메일주소, 로그인하지 않은 경우 공백" forKey:@"account"];
-        [obj setValue:@"카테고리 정보 1, 대분류" forKey:@"cate1"];
-        [obj setValue:@"카테고리 정보 2, 중분류" forKey:@"cate2"];
-        [obj setValue:@"카테고리 정보 3, 소분류" forKey:@"cate3"];
-        
+        [obj setValue:@"상품 수량" forKey:@"qty"];
         [obj setValue:@"mobile" forKey:@"platform"];
         
         [[ALTracker sharedSingletonClass] reportCartTag:obj];
@@ -98,38 +113,48 @@
     // 상품이 여러개인경우 반복해서 호출합니다.
     {
         NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-        [obj setValue:@"상품 번호1" forKey:@"p_no"];
-        [obj setValue:@"상품 이름 입력" forKey:@"name"];
-        [obj setValue:@"상품 수량" forKey:@"qty"];
+
+        [obj setValue:@"상품 번호 입력" forKey:@"p_no"];          //상품 번호
+        [obj setValue:@"상품 이름 입력" forKey:@"p_name"];        //상품 이름
         
-        [obj setValue:@"12300" forKey:@"price"];    //상품 가격 : 숫자만 포함하는 문자열로 전달
-        [obj setValue:@"10000" forKey:@"discount"]; //할인된 가격 : 숫자만 포함하는 문자열로 전달
+        [obj setValue:@"12300" forKey:@"price"];               //상품 현재 판매 가격 : 숫자만 포함하는 문자열로 전달
+        [obj setValue:@"xxx mall" forKey:@"shop_id"];          //샵이름 문자열
+        [obj setValue:@"http://상품이미지주소" forKey:@"thumb"];   //섬네일 주소 (http:// https:// 포함 전체 url)
         
-        [obj setValue:@"http://상품이미지주소" forKey:@"thumb"];
+        [obj setValue:@"카테고리 정보 1, 소분류" forKey:@"cate1"]; //카테고리 소분류 (상품카테고리 소분류 : 없을 시 빈 값)
+        [obj setValue:@"카테고리 정보 2, 중분류" forKey:@"cate2"]; //카테고리 중분류 (상품카테고리 소분류 : 없을 시 빈 값)
+        [obj setValue:@"카테고리 정보 3, 대분류" forKey:@"cate3"]; //카테고리 대분류 (상품카테고리 대분류 : 없을 시 빈 값)
+        
+        [obj setValue:@"12300" forKey:@"regular_price"];      //정상 가격 (정상가 미할인 가격 : 없을 시 빈 값)
+        [obj setValue:@"10000" forKey:@"discount"];           //세일 가격 (없을 시 빈값)
+        
+        //기타 부가 정보
         [obj setValue:@"로그인 한 경우 사용자의 아이디 또는 이메일주소, 로그인하지 않은 경우 공백" forKey:@"account"];
-        [obj setValue:@"카테고리 정보 1, 대분류" forKey:@"cate1"];
-        [obj setValue:@"카테고리 정보 2, 중분류" forKey:@"cate2"];
-        [obj setValue:@"카테고리 정보 3, 소분류" forKey:@"cate3"];
-        
+        [obj setValue:@"상품 수량" forKey:@"qty"];
         [obj setValue:@"mobile" forKey:@"platform"];
         
         [[ALTracker sharedSingletonClass] reportBuyTag:obj];
     }
     {
         NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-        [obj setValue:@"상품 번호2" forKey:@"p_no"];
-        [obj setValue:@"상품 이름 입력" forKey:@"name"];
-        [obj setValue:@"상품 수량" forKey:@"qty"];
+
+        [obj setValue:@"상품 번호 입력" forKey:@"p_no"];          //상품 번호
+        [obj setValue:@"상품 이름 입력" forKey:@"p_name"];        //상품 이름
         
-        [obj setValue:@"12300" forKey:@"price"];    //상품 가격 : 숫자만 포함하는 문자열로 전달
-        [obj setValue:@"10000" forKey:@"discount"]; //할인된 가격 : 숫자만 포함하는 문자열로 전달
+        [obj setValue:@"12300" forKey:@"price"];               //상품 현재 판매 가격 : 숫자만 포함하는 문자열로 전달
+        [obj setValue:@"xxx mall" forKey:@"shop_id"];          //샵이름 문자열
+        [obj setValue:@"http://상품이미지주소" forKey:@"thumb"];   //섬네일 주소 (http:// https:// 포함 전체 url)
         
-        [obj setValue:@"http://상품이미지주소" forKey:@"thumb"];
+        [obj setValue:@"카테고리 정보 1, 소분류" forKey:@"cate1"]; //카테고리 소분류 (상품카테고리 소분류 : 없을 시 빈 값)
+        [obj setValue:@"카테고리 정보 2, 중분류" forKey:@"cate2"]; //카테고리 중분류 (상품카테고리 소분류 : 없을 시 빈 값)
+        [obj setValue:@"카테고리 정보 3, 대분류" forKey:@"cate3"]; //카테고리 대분류 (상품카테고리 대분류 : 없을 시 빈 값)
+        
+        [obj setValue:@"12300" forKey:@"regular_price"];      //정상 가격 (정상가 미할인 가격 : 없을 시 빈 값)
+        [obj setValue:@"10000" forKey:@"discount"];           //세일 가격 (없을 시 빈값)
+        
+        //기타 부가 정보
         [obj setValue:@"로그인 한 경우 사용자의 아이디 또는 이메일주소, 로그인하지 않은 경우 공백" forKey:@"account"];
-        [obj setValue:@"카테고리 정보 1, 대분류" forKey:@"cate1"];
-        [obj setValue:@"카테고리 정보 2, 중분류" forKey:@"cate2"];
-        [obj setValue:@"카테고리 정보 3, 소분류" forKey:@"cate3"];
-        
+        [obj setValue:@"상품 수량" forKey:@"qty"];
         [obj setValue:@"mobile" forKey:@"platform"];
         
         [[ALTracker sharedSingletonClass] reportBuyTag:obj];
