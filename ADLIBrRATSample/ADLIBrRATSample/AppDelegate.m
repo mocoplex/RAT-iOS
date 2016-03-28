@@ -9,11 +9,25 @@
 #import "AppDelegate.h"
 #import <ADLIBrRAT/ALTracker.h>
 
+#define ADLIB_RAT_KEY       @"INSERT_YOUR_RAT_KEY"
 
-#define ADLIB_RAT_KEY @"INSERT_YOUR_RAT_KEY"
-
+#define ADLIB_HYBRID_TAG    @"Hybrid"
 
 @implementation AppDelegate
+
+/*
+// 하이브리드 앱 구성 시 웹뷰의 UserAgent 수정에 필요
+// 웹페이지 스크립트 처리를 수정하지 않았다면 @"Hybrid" 키워드로 처리됨.
++ (void)initialize
+{
+    UIWebView* webView = [[UIWebView alloc] initWithFrame:CGRectZero];
+    NSString* secretAgent = [webView stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
+    
+    NSString *replaceAgent = [NSString stringWithFormat:@"%@ %@", secretAgent , ADLIB_HYBRID_TAG];
+    NSDictionary *dic = @{@"UserAgent" : replaceAgent};
+    [[NSUserDefaults standardUserDefaults] registerDefaults:dic];
+}
+*/
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
