@@ -19,8 +19,9 @@
 		7DD065B21991BFE3009CB3C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD065B11991BFE3009CB3C2 /* AppDelegate.m */; };
 		7DD065B51991BFE3009CB3C2 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD065B31991BFE3009CB3C2 /* Main_iPhone.storyboard */; };
 		7DD065BD1991BFE3009CB3C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DD065BC1991BFE3009CB3C2 /* Images.xcassets */; };
+		B03ABEF91F443E6B0039DAF5 /* ADLIBrRAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03ABEF81F443E6B0039DAF5 /* ADLIBrRAT.framework */; };
+		B03ABEFB1F443E810039DAF5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03ABEFA1F443E810039DAF5 /* AdSupport.framework */; };
 		B0C1B2C41C64322F0028F243 /* PickyNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C1B2C31C64322F0028F243 /* PickyNativeViewController.m */; };
-		B0C9777C1C76B3C80039C71E /* ADLIBrRAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C9777B1C76B3C80039C71E /* ADLIBrRAT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,9 +49,10 @@
 		7DD065CB1991BFE3009CB3C2 /* ADLIBrRATSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ADLIBrRATSampleTests-Info.plist"; sourceTree = "<group>"; };
 		7DD065CD1991BFE3009CB3C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7DD065CF1991BFE3009CB3C2 /* ADLIBrRATSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADLIBrRATSampleTests.m; sourceTree = "<group>"; };
+		B03ABEF81F443E6B0039DAF5 /* ADLIBrRAT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ADLIBrRAT.framework; sourceTree = "<group>"; };
+		B03ABEFA1F443E810039DAF5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		B0C1B2C21C64322F0028F243 /* PickyNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickyNativeViewController.h; sourceTree = "<group>"; };
 		B0C1B2C31C64322F0028F243 /* PickyNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickyNativeViewController.m; sourceTree = "<group>"; };
-		B0C9777B1C76B3C80039C71E /* ADLIBrRAT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ADLIBrRAT.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0C9777C1C76B3C80039C71E /* ADLIBrRAT.framework in Frameworks */,
+				B03ABEFB1F443E810039DAF5 /* AdSupport.framework in Frameworks */,
+				B03ABEF91F443E6B0039DAF5 /* ADLIBrRAT.framework in Frameworks */,
 				7D216DD219AB35B600379BBC /* CoreTelephony.framework in Frameworks */,
 				7DD065A61991BFE3009CB3C2 /* UIKit.framework in Frameworks */,
 				7DD065A21991BFE3009CB3C2 /* Foundation.framework in Frameworks */,
@@ -100,7 +103,8 @@
 		7DD065A01991BFE3009CB3C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B0C9777B1C76B3C80039C71E /* ADLIBrRAT.framework */,
+				B03ABEFA1F443E810039DAF5 /* AdSupport.framework */,
+				B03ABEF81F443E6B0039DAF5 /* ADLIBrRAT.framework */,
 				7D216DD119AB35B600379BBC /* CoreTelephony.framework */,
 				7DD065A11991BFE3009CB3C2 /* Foundation.framework */,
 				7DD065A31991BFE3009CB3C2 /* CoreGraphics.framework */,
@@ -183,7 +187,7 @@
 		7DD065961991BFE3009CB3C2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = mocoplex;
 			};
 			buildConfigurationList = 7DD065991991BFE3009CB3C2 /* Build configuration list for PBXProject "ADLIBrRATSample" */;
@@ -275,14 +279,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -295,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,20 +324,25 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -349,7 +363,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ADLIBrRATSample/ADLIBrRATSample-Prefix.pch";
 				INFOPLIST_FILE = "ADLIBrRATSample/ADLIBrRATSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mocoplex.rat.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -372,7 +386,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ADLIBrRATSample/ADLIBrRATSample-Prefix.pch";
 				INFOPLIST_FILE = "ADLIBrRATSample/ADLIBrRATSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mocoplex.rat.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7 armv7s arm64";
